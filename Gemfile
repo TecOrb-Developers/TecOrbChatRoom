@@ -1,18 +1,16 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.2.1'
 
 gem 'rails', '4.1.5'
 
-group :development do
-  gem 'sqlite3'
+
+group :production do
+ gem 'pg'
+  gem 'rails_12factor'
   gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'
-end
-
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+  gem 'eventmachine'
 end
 
 # Use SCSS for stylesheets
