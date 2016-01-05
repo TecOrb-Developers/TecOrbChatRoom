@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
       user = User.find_or_initialize_by(uid: uid, provider: provider)
       user.name = info.name
       user.avatar_url = info.image
-      user.profile_url = info.urls.send(provider.capitalize.to_sym)
+      # user.profile_url = info.urls.send(provider.capitalize.to_sym)
       user.save!
       user
     end
